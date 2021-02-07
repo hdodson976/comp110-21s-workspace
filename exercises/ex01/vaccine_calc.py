@@ -1,6 +1,6 @@
 """A vaccination calculator."""
 
-__author__ = "YOUR PID HERE"
+__author__ = "730142451"
 
 # The datetime data type is imported from the datetime library.
 # A datetime object models a specific date and time.
@@ -18,3 +18,18 @@ from datetime import timedelta
 
 
 # Begin your solution here...
+population: float = input("Population: ")
+doses_admin: float = input("Doses administered: ")
+doses_per_day: float = input("Doses per day: ")
+target_percent: float = input("Target percent vaccinated: ")
+
+per_pop: float = float(population) * (float(target_percent) / 100)
+numerator: float = (per_pop - (float(doses_admin) / 2)) * 2
+enitre_calc: float = numerator / float(doses_per_day)
+rounded: int = round(enitre_calc)
+
+today: datetime = datetime.today()
+remaining_days: timedelta = timedelta(rounded)
+end_date: datetime = today + remaining_days
+
+print("We will reach " + str(target_percent) + "% vaccination in " + str(rounded) + " days, which falls on " + end_date.strftime("%B %d, %Y") + ".")
