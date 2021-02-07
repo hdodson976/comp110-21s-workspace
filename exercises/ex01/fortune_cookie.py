@@ -19,13 +19,13 @@ a: int = randint(1, 4)
 if a >= 2:
     if a >= 3:
         if a == 3:
-                print("Swimming is easy. Staying afloat is hard.")
+            print("Swimming is easy. Staying afloat is hard.")
         else: 
-                print("A fresh start will put you on your way.")
+            print("A fresh start will put you on your way.")
     else:
-            print("A friend asks only for your time not your money.")
+        print("A friend asks only for your time not your money.")
 else: 
-        print("Your ideals are well within your reach.")
+    print("Your ideals are well within your reach.")
 
 
 print("Now, go spread positive vibes!")

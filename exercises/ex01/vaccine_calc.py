@@ -18,10 +18,10 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-population: float = input("Population: ")
-doses_admin: float = input("Doses administered: ")
-doses_per_day: float = input("Doses per day: ")
-target_percent: float = input("Target percent vaccinated: ")
+population: str = input("Population: ")
+doses_admin: str = input("Doses administered: ")
+doses_per_day: str = input("Doses per day: ")
+target_percent: str = input("Target percent vaccinated: ")
 
 per_pop: float = float(population) * (float(target_percent) / 100)
 numerator: float = (per_pop - (float(doses_admin) / 2)) * 2
@@ -32,4 +32,7 @@ today: datetime = datetime.today()
 remaining_days: timedelta = timedelta(rounded)
 end_date: datetime = today + remaining_days
 
-print("We will reach " + str(target_percent) + "% vaccination in " + str(rounded) + " days, which falls on " + end_date.strftime("%B %d, %Y") + ".")
+first_half: str = "We will reach " + str(target_percent) + "% vaccination in " + str(rounded) + " days,"
+second_half: str = " which falls on " + end_date.strftime("%B %d, %Y") + "."
+
+print(first_half + second_half)

@@ -5,12 +5,13 @@ __author__ = "730142451"
 
 # Begin your solution here...
 prompt: str = input("Enter an int: ")
+def input(prompt: )
 
 if (int(prompt) % 2) == 0:
     if (int(prompt) % 7) == 0:
-            print("TAR HEELS")
+        print("TAR HEELS")
     else:
-         print("TAR")
+        print("TAR")
 else: 
     if (int(prompt) % 7) == 0:
         print("HEELS")
