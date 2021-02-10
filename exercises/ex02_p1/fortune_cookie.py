@@ -15,7 +15,7 @@ def main() -> None:
 
 # TODO 1: Define your fortune_cookie function here.
 def fortune_cookie() -> str:
-   """Randomly selects fortune."""
+    """Randomly selects fortune."""
     x: int = randint(1, 4)
     if x < 2:
         return "Swimming is easy. Staying afloat is hard."
