@@ -12,6 +12,7 @@ def main() -> None:
 
 # TODO 1: Define the tar_heels function, and its logic, here.
 def tar_heels(choice: int) -> str:
+   """Converts input into the proper word."""
     if (choice % 2) == 0:
         if (choice % 7) == 0:
             return "TAR HEELS"
