@@ -17,7 +17,7 @@ def main() -> None:
     final_date: str = future_date(remaining_days)
     # TODO 5: Print the expected output using the variables above.
     first_half: str = "We will reach " + str(target) + "% vaccination in " + str(remaining_days) + " days,"
-    second_half: str = " which falls on " + final_date.strftime("%B %d, %Y") + "."
+    second_half: str = " which falls on " + str(final_date.strftime("%B %d, %Y")) + "."
     print(first_half + second_half)
 
 
@@ -33,7 +33,7 @@ def days_to_target(population: int, doses: int, doses_per_day: int, target: int)
 
 # TODO 3: Define future_date function
 def future_date(remaining_days: int) -> str:
-    """Calculates the final date"""
+    """Calculates the final date."""
     today: datetime = datetime.today()
     remaining: timedelta = timedelta(remaining_days)
     end_date: datetime = today + remaining
