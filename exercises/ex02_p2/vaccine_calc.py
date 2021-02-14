@@ -23,7 +23,7 @@ def main() -> None:
 
 # TODO 1: Define days_to_target function
 def days_to_target(population: int, doses: int, doses_per_day: int, target: int) -> int:
-    "Uses input to calculate the days needed to reach the target percentage."
+    """"Uses input to calculate the days needed to reach the target percentage.""""
     percent_of_pop: float = float(population) * (float(target) / 100)
     numerator: float = (percent_of_pop - (float(doses) / 2)) * 2
     enitre_calc: float = numerator / float(doses_per_day)
@@ -33,6 +33,7 @@ def days_to_target(population: int, doses: int, doses_per_day: int, target: int)
 
 # TODO 3: Define future_date function
 def future_date(remaining_days: int) -> str:
+    """Calculates the final date"""
     today: datetime = datetime.today()
     remaining: timedelta = timedelta(remaining_days)
     end_date: datetime = today + remaining
