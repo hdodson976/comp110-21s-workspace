@@ -37,7 +37,7 @@ def future_date(remaining_days: int) -> str:
     today: datetime = datetime.today()
     remaining: timedelta = timedelta(remaining_days)
     end_date: datetime = today + remaining
-    return end_date
+    return str(end_date)
 
 
 if __name__ == "__main__":
