@@ -5,8 +5,8 @@ from random import randint
 __author__ = "730142451"
 
 # Global variables defined
-player: str = input("What is your name? ")
-points: int = 100
+player: str = str(input("What is your name? "))
+points: int = int(100)
 
 
 # main function, start with greet function.
