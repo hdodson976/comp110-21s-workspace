@@ -4,9 +4,9 @@ from random import randint
 
 __author__ = "730142451"
 
-# Global variables
 PLAYER: str = input("Welcome to Virtual MMA. What is your name? ")
-points: int = 100
+POINTS: int = 100
+
 
 # main function, start with greet function.
 def main() -> None: 
@@ -25,11 +25,11 @@ happy_face: str = "\U0001F642"
 dizzy_face: str = "\U0001F635\U0001F4AB"
 
 
-# greet function, explain how the moves and point system works."
+# greet function, printing welcome message and explaining game."
 def greet() -> None: 
-    """Player is greeted and the game is explained."""
+    """Welcome message and the game is explained."""
     print(f"{PLAYER}, in this game, you will engage in a MMA fight with a virutal opponent.")
-    print(f"You and your opponent will begin the fight with {points} health points each.")
+    print(f"You and your opponent will begin the fight with {POINTS} health points each.")
     print("Each round you will choose between kicking and punching.")
     print("Your attack will reduce your opponenets health.")
     print("Whoever's health points reaches 0 first loses.")
@@ -54,13 +54,13 @@ def practice() -> None:
     # The virutal opponents move will be randomly selected. 
     opponent_move: int = randint(1, 2)
     if opponent_move == 1: 
-        global points
-        points = points - punch
-        print(f"{PLAYER}'s Health: {points}")
+        global POINTS
+        POINTS = POINTS - punch
+        print(f"{PLAYER}'s Health: {POINTS}")
     else: 
         if opponent_move == 2: 
-            points = points - kick
-            print(f"{PLAYER}'s Health: {points}")
+            POINTS = POINTS - kick
+            print(f"{PLAYER}'s Health: {POINTS}")
     if practice_move == "punch":
         global opponent_points
         opponent_points = opponent_points - punch
@@ -77,16 +77,16 @@ def practice() -> None:
 # First round, then offer the player the option to surrender.
 def fight() -> None:
     """First fight loop, continues until the players points reaches 50."""
-    global points
-    points = 100
+    global POINTS
+    POINTS = 100
     global opponent_points
     opponent_points = 100
-    while points > 50 and opponent_points > 1: 
+    while POINTS > 50 and opponent_points > 1: 
         opponent_move: int = randint(1, 2)
         move: str = input("Would you like to punch or kick? ")
         if opponent_move == 1: 
-            points = points - punch
-            print(f"{PLAYER}'s Health: {points}")
+            POINTS = POINTS - punch
+            print(f"{PLAYER}'s Health: {POINTS}")
             if move == "punch":
                 opponent_points = opponent_points - punch
                 print(f"Opponent's Health: {opponent_points}")
@@ -97,8 +97,8 @@ def fight() -> None:
                 else: 
                     print(f"Opponent's Health: {opponent_points}")
         else: 
-            points = points - kick
-            print(f"{PLAYER}'s Health: {points}")
+            POINTS = POINTS - kick
+            print(f"{PLAYER}'s Health: {POINTS}")
             if move == "punch":
                 opponent_points = opponent_points - punch
                 print(f"Opponent's Health: {opponent_points}")
@@ -111,7 +111,7 @@ def fight() -> None:
         if opponent_points < 0:
             print(f"You win {happy_face}!")
             main()
-    check_in(points)
+    check_in(POINTS)
     
         
 def check_in(x: int) -> None: 
