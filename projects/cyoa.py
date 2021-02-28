@@ -5,11 +5,12 @@ from random import randint
 __author__ = "730142451"
 
 
-
 # main function, start with greet function.
 def main() -> None: 
+    """Main function to initiate the game."""
     greet()
     pathway_selection()
+
 
 # Global variables
 player: str = input("Welcome to Virtual MMA. What is your name? ")
@@ -26,9 +27,10 @@ dizzy_face: str = "\U0001F635\U0001F4AB"
 
 # greet function, explain how the moves and point system works."
 def greet() -> None: 
+    """Player is greeted and the game is explained."""
     print(f"{player}, in this game, you will engage in a MMA fight with a virutal opponent.")
     print(f"You and your opponent will begin the fight with {points} health points each.")
-    print("Each round you will choose between blocking, kicking, and punching.")
+    print("Each round you will choose between kicking and punching.")
     print("A combination of your selection and you opponent's selection will determine how each players health is impacted.")
     print("Whoever's health points reaches 0 first loses")
     
@@ -47,6 +49,7 @@ def pathway_selection () -> None:
 
 
 def practice() -> None:
+    """Play can perform a practice round and then returns to pathway selection."""
     practice_move: str = input("Would you like to punch or kick?")
     # The virutal opponents move will be randomly selected. 
     opponent_move: int = randint(1, 2)
@@ -72,7 +75,8 @@ def practice() -> None:
 
 
 # First round, then offer the player the option to surrender.
-def fight() -> None: 
+def fight() -> None:
+    """First fight loop, continues until the players points reaches 50."""
     global points
     points = 100
     global opponent_points
@@ -110,8 +114,8 @@ def fight() -> None:
     check_in(points)
     
         
-
 def check_in(x = int) -> None: 
+    """Function checks in with the player, and then may continue on to the second loop."""
     answer: str = input(f"Your health is getting low {dizzy_face}, do you want to surrender or continue? ")
     if answer == "surrender":
         print(f"Goodbye {player}")
@@ -157,4 +161,3 @@ def check_in(x = int) -> None:
 #Call main function
 if __name__ == "__main__":
     main()
-
