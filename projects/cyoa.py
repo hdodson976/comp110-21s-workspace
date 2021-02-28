@@ -36,7 +36,7 @@ def greet() -> None:
     
 
 # 3 different pathways for the play to select from
-def pathway_selection () -> None:
+def pathway_selection() -> None:
     """Player selects whether to surrender, have a practice round, or begin the fight."""
     pathway: str = input("Would you like to surrender, practice, or begin? ")
     if pathway == "surrender":
@@ -114,7 +114,7 @@ def fight() -> None:
     check_in(points)
     
         
-def check_in(x = int) -> None: 
+def check_in(x: int) -> None: 
     """Function checks in with the player, and then may continue on to the second loop."""
     answer: str = input(f"Your health is getting low {dizzy_face}, do you want to surrender or continue? ")
     if answer == "surrender":
@@ -158,6 +158,6 @@ def check_in(x = int) -> None:
             print(f"You win {happy_face}!")
 
 
-#Call main function
+# Call main function
 if __name__ == "__main__":
     main()
