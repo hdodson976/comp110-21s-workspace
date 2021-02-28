@@ -4,7 +4,9 @@ from random import randint
 
 __author__ = "730142451"
 
-player: str = input("Welcome to Virtual MMA. What is your name? ")
+#Global varibale defined
+global
+player: str = input("What is your name? ")
 points: int = 100
 
 
@@ -28,7 +30,8 @@ dizzy_face: str = "\U0001F635\U0001F4AB"
 # greet function, printing welcome message and explaining game."
 def greet() -> None: 
     """Welcome message and the game is explained."""
-    print(f"{player}, in this game, you will engage in a MMA fight with a virutal opponent.")
+    print(f"{player}, welcome to virtual MMA."
+    print("In this game, you will engage in a MMA fight with a virutal opponent.")
     print(f"You and your opponent will begin the fight with {points} health points each.")
     print("Each round you will choose between kicking and punching.")
     print("Your attack will reduce your opponenets health.")
