@@ -4,6 +4,9 @@ from random import randint
 
 __author__ = "730142451"
 
+# Global variables
+PLAYER: str = input("Welcome to Virtual MMA. What is your name? ")
+points: int = 100
 
 # main function, start with greet function.
 def main() -> None: 
@@ -12,11 +15,8 @@ def main() -> None:
     pathway_selection()
 
 
-# Global variables
-PLAYER: str = input("Welcome to Virtual MMA. What is your name? ")
 # Points tracks the players health throughout the fight, will change depending on
 # choices and the random reponse back. 
-points: int = 100
 opponent_points: int = 100
 kick: int = randint(10, 20)
 punch: int = randint(1, 20)
@@ -29,10 +29,10 @@ dizzy_face: str = "\U0001F635\U0001F4AB"
 def greet() -> None: 
     """Player is greeted and the game is explained."""
     print(f"{PLAYER}, in this game, you will engage in a MMA fight with a virutal opponent.")
-    print(f"You and your opponent will begin the fight with {POINTS} health points each.")
+    print(f"You and your opponent will begin the fight with {points} health points each.")
     print("Each round you will choose between kicking and punching.")
-    print("A combination of your selection and you opponent's selection will determine how each players health is impacted.")
-    print("Whoever's health points reaches 0 first loses")
+    print("Your attack will reduce your opponenets health.")
+    print("Whoever's health points reaches 0 first loses.")
     
 
 # 3 different pathways for the play to select from
