@@ -12,6 +12,8 @@ points: int
 # main function, start with greet function.
 def main() -> None: 
     """Main function to initiate the game."""
+    global points 
+    points = 100
     greet()
     instructions()
     pathway_selection()
