@@ -5,15 +5,13 @@ from random import randint
 __author__ = "730142451"
 
 # Global variables defined
-player: input("What is your name? ")
-points: int
+player: str 
+points: int = 100
 
 
 # main function, start with greet function.
 def main() -> None: 
     """Main function to initiate the game."""
-    global points 
-    points = 100
     greet()
     instructions()
     pathway_selection()
@@ -32,7 +30,8 @@ dizzy_face: str = "\U0001F635\U0001F4AB"
 # greet function, printing welcome message and explaining game."
 def greet() -> None: 
     """Ask players name and print welcome message."""
-    print(f"{player}, welcome to the virtual MMA game.")
+    global player
+    player: input("Welcome to the virtual MMA game. What is your name? "
     
 
 def instructions() -> None:
