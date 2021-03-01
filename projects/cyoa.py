@@ -6,7 +6,7 @@ __author__ = "730142451"
 
 # Global variables defined
 player: input("What is your name? ")
-points: 100
+points: int
 
 
 # main function, start with greet function.
